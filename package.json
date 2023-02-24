@@ -1,0 +1,16 @@
+{
+    "name": "automata_project",
+    "version": "1.0.0",
+    "description": "Automata team project of FA",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch": "npx tailwindcss -i ./src/static/src/input.css -o ./src/static/dist/css/output.css --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "tailwindcss": "^3.2.7"
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <title>Automata Project</title>
+</head>
+
+
+<body>
+    <div class="relative">
+        <div class="w-screen h-screen overflow-clip absolute top-0 left-0 z-10">
+            <img src="{{url_for('static', filename='storage/geomoetrical-cubes-paper.jpg')}}" alt="geomoetrical-cubes-paper" class="w-full">
+        </div>
+        <div class="w-screen h-screen bg-white bg-opacity-60 absolute top-0 left-0 z-20"></div>
+        <div class="w-screen h-screen flex flex-col space-y-5 items-center justify-center absolute top-0 left-0 z-30 text-neutral-700">
+            <div>
+                <p class="text-6xl text-center">Welcome to <span class="bg-neutral-700 text-white p-3">Automa Project</span></p>
+            </div>
+            <div>
+                <p class="text-3xl">This is a sample flask application that we will us in our project</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
