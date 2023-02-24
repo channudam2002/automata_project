@@ -16,7 +16,7 @@ To check your installed python3:
 python3 --version
 ```
 ## 2. Install flask
-### 2.1 Set up python virtual envireontment for project
+### 2.1 Set up python virtual environtment for project
 #### macOS/Linux
 ```
 $ mkdir myproject
@@ -29,7 +29,7 @@ $ python3 -m venv automata_venv
 > cd automata_project
 > py -3 -m venv automata_venv
 ```
-### 2.2 Activate the envoirement
+### 2.2 Activate the envoironment
 #### macOS/Linux
 ```
 $ . automata_venv/bin/activate
