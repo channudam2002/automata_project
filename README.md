@@ -1,3 +1,4 @@
+![cadt-logo](https://www.cadt.edu.kh/wp-content/uploads/2022/02/CADT-Masterbrand-Logos-Navy_CADT-Small-Khmer-English.png)
 # Automata Project - README (អត់អានអត់ទៅ lolz)
 **Intergrated with tailwindcss** <br/>
 
