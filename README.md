@@ -32,11 +32,11 @@ $ python3 -m venv automata_venv
 ### 2.2 Activate the envoirement
 #### macOS/Linux
 ```
-$ . venv/bin/activate
+$ . automata_venv/bin/activate
 ```
 #### Windows
 ```
-> venv\Scripts\activate
+> automata_venv\Scripts\activate
 ```
 When your environment is activated you will see your environment name surrounded by parentheses before your current location in terminal like this:
 `
