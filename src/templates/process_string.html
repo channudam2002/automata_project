@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-family: Verdana;
+            text-align: center;
+        }
+
+        form {
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: #663366;
+            font-size: 20px;
+            font-family: Verdana;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        input[type=text] {
+            width: 80%;
+            padding: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Let Input your string Here</h1>
+    <form>
+        Input the Number of States :<br>
+        <input type="text" name="your number of states"><br> <br>
+        Input the Number of String : <br>
+        <input type="text" name="your number of string"><br> <br>
+
+        Choose a start states : <br><br>
+        <label class="checkbox-inline"><input type="checkbox" value="">q0</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">q1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">q2</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">q3</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">q4</label>
+        <br><br>
+
+        Choose a final states : <br><br>
+        <label class="checkbox-inline"><input type="checkbox" value="">q0</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">q1</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">q2</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">q3</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">q4</label>
+    </form>
+
+</body>
+
+</html>
