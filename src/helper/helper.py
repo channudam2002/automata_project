@@ -1,4 +1,5 @@
 class FiniteAutomata:
+
     def __init__(self, alphaArr, stateNum, stateArr, finalStateArr, startStateArr, tranFuncObj) -> None:
         self.stateNum = stateNum
         self.stateArr = stateArr
