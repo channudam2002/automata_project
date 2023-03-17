@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
     <title>Automata Project</title>
 </head>
-
+    <style>
+         .btn {
+            padding: 10px 40px;
+            background-color: #236B8E;
+            color: #FFFFFF;
+            font-style: oblique;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+    </style>
 
 <body>
     <div class="relative">
@@ -18,10 +27,9 @@
         <div class="w-screen h-screen bg-white bg-opacity-60 absolute top-0 left-0 z-20"></div>
         <div class="w-screen h-screen flex flex-col space-y-5 items-center justify-center absolute top-0 left-0 z-30 text-neutral-700">
             <div>
-                <p class="text-6xl text-center">Welcome to <span class="bg-neutral-700 text-white p-3">Automa Project</span></p>
+                <p class="text-6xl text-center">Let's Get Start</p>
             </div>
-            <div>
-                <p class="text-3xl">This is a sample flask application that we will us in our project</p>
+                <a href="{{url_for('page2')}}" class="btn">START</a>
             </div>
         </div>
     </div>
