@@ -7,7 +7,7 @@ class FiniteAutomata:
         self.startStateArr = startStateArr
         self.tranFuncObj = tranFuncObj
         self.alphaArr = alphaArr
-     
+    # okayyy
     def processString(self, string):
         return string
 
