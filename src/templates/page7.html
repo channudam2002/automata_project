@@ -18,7 +18,7 @@
             width: 500px;
             margin: auto;
             padding: 75px;
-            background-color: lightgray;
+            background-color: blanchedalmond;
             font-size: 20px;
             font-family: Verdana;
             color: white;
@@ -32,36 +32,104 @@
             font-size: 18px;
         }
 
-        .btn {
-            padding: 10px 40px;
-            background-color: green;
-            color: #FFFFFF;
-            font-style: oblique;
-            font-weight: bold;
-            border-radius: 10px;
-            margin-left: 220px;
-            margin-top: 10px;
-        }
+          .pagination .active a {
+	color: #61a9d0;
+	background-color: transparent;
+	font-weight: 600;
+}
+.pagination .active a:hover {
+	background-color: transparent;
+	color: #143361;
+	border: 0px;
+}
+.pagination .active a:focus {
+	background-color: transparent;
+	color: #143361;
+	outline: none;
+}
+.pagination li a {
+	border: 3px;
+	margin-left: 0px;
+	color: #707070;
+	padding: 7px 5px;
+	margin: 0px 20px;
+}
+.pagination li a:hover {
+	background-color: transparent;
+	color: #4A90E2;
+	padding-bottom: 3px;
+	border-bottom: 3px solid;
+}
+.pagination li a:focus {
+	outline: none;
+	background-color: transparent;
+}
+.pagination li:first-child a, .pagination li:last-child a {
+	border: 2px solid ##0000A5 !important;
+	border-radius: 6px;
+	margin: 0px;
+	padding: 6px 12px;
+	border: 2px solid;
+	font-size: 14px;
+	color: #0000A5;
+    margin-left: 5px;
+    margin-top: 30px;
+}
+.pagination li:first-child a:hover{
+	text-decoration: none !important;
+	color: #fff;
+	background-color: red;
+}
+.pagination li:last-child a:hover {
+    text-decoration: none !important;
+	color: #fff;
+	background-color:  #32CD32;
+}
+.pagination li:first-child a:focus, .pagination li:last-child a:focus {
+	outline: none;
+
+}
+.form-group:hover{
+    background-color: #FFE5B4;
+    width: 100%%;
+    height: auto;
+    rotate: 0deg;
+}
     </style>
 </head>
 
 <body>
     <div class="relative">
         <div class="w-screen h-screen overflow-clip absolute  top-0 left-0 z-10">
-            <img src="{{url_for('static', filename='storage/Math2.jpg')}}" alt="math" class="w-full">
+            <img src="{{url_for('static', filename='storage/s6.jpg')}}" alt="math" class="w-full">
         </div>
         <div
             class="w-screen h-screen flex flex-col space-y-5 items-center justify-center absolute top-0 left-0 z-30 text-black">
             <div class="form-group">
-                <label for="exampleInputEmail1 " class="text-dark mb-3 text-center px-5">Input Start states : </label>
-                <input type="string input" class="form-control border-success" id="" aria-describedby=""
-                    placeholder=""><br><br>
+                <label for="exampleInputEmail1 " class="text-dark mb-4 text-center px-6 font-bold">Input the final states : </label>
+                <input type="string input" class="form-control border-success text-sm " id="" aria-describedby=""
+                    placeholder="Example : q1, q2..."><br><br>
                 <div>
-                    <a href="{{url_for('page8')}} " class="btn">Next</a>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="{{url_for('page6')}} " class="btn">
+                                <span aria-hidden="true">Previous</span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li>
+                            <a href="{{url_for('page8')}}" aria-label="Next" class="btn">
+                                <span aria-hidden="true">Next</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
     </div>
     </div>
 </body>

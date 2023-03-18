@@ -33,10 +33,10 @@ def page7():
     return render_template('page7.html')
 @app.route('/page8')
 def page8():
-    return render_template('/page8.html')
+    return render_template('page8.html')
 @app.route('/page9')
 def page9():
-    return render_template('/page9.html')
+    return render_template('page9.html')
 
 
 

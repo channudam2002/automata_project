@@ -24,19 +24,25 @@
             margin-top: 95px;
             margin-bottom: 45px;
         }
+        .btn:hover{
+            width:200px
+            height:200px
+            background-color: white;
+            color: black;
+        }
     </style>
 
 <body>
     <div class="relative">
         <div class="w-screen h-screen overflow-clip absolute top-0 left-0 z-10">
-            <img src="{{url_for('static', filename='storage/math1.jpg')}}" alt="geomoetrical-cubes-paper" class="w-full">
+            <img src="{{url_for('static', filename='storage/math3.jpg')}}" alt="geomoetrical-cubes-paper" class="w-full">
         </div>
-        <div class="w-screen h-screen bg-white bg-opacity-60 absolute top-0 left-0 z-20"></div>
-        <div class="w-screen h-screen flex flex-col space-y-5 items-center justify-center absolute top-0 left-0 z-30 text-black">
+        <div class="w-screen h-screen absolute top-0 left-0 z-20"></div>
+        <div class="w-screen h-screen flex flex-col space-y-5 items-center justify-center absolute top-0 left-0 z-30 text-white">
             <div>
-                <p class="title text-6xl text-center">Let's Get Start</p>
+                <p class="title text-6xl text-center font-bold">Let's Get Start</p>
             </div>
-                <a href="{{url_for('page2')}}" class="btn">START</a>
+                <a href="{{url_for('option_page')}}" class="btn">START</a>
             </div>
         </div>
     </div>

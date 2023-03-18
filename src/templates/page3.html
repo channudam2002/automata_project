@@ -21,7 +21,7 @@
             width: 500px;
             margin: auto;
             padding: 75px;
-            background-color: wheat;
+            background-color: blanchedalmond;
             font-size: 20px;
             font-family: Verdana;
             color: white;
@@ -75,22 +75,26 @@
 
         .pagination li:first-child a,
         .pagination li:last-child a {
-            border: 2px solid #3991c0 !important;
+            border: 2px solid #0000A5 !important;
             border-radius: 6px;
             margin: 0px;
             padding: 6px 12px;
             border: 2px solid;
             font-size: 14px;
-            color: #3991c0;
+            color: #0000A5;
             margin-left: 5px;
             margin-top: 30px;
         }
 
-        .pagination li:first-child a:hover,
+        .pagination li:first-child a:hover{
+            text-decoration: none !important;
+            color: #fff;
+            background-color: red;
+        }
         .pagination li:last-child a:hover {
             text-decoration: none !important;
             color: #fff;
-            background-color: #3991c0;
+            background-color:  #32CD32;
         }
 
         .pagination li:first-child a:focus,
@@ -98,6 +102,12 @@
             outline: none;
 
         }
+        .form-group:hover{
+            background-color: #FFE5B4;
+            width: 100%%;
+            height: auto;
+            rotate: 0deg;
+    }
     </style>
 </head>
 
@@ -109,10 +119,10 @@
         <div
             class="w-screen h-screen flex flex-col space-y-5 items-center justify-center absolute top-0 left-0 z-30 text-black">
             <div class="form-group">
-                <label for="exampleInputEmail1 " class="text-dark mb-3 text-center px-5">Input the States :
+                <label for="exampleInputEmail1 " class="text-dark mb-4 text-center px-6 font-bold   ">Input the States :
                 </label>
                 <input type="string input" class="form-control border-success" id="" aria-describedby=""
-                    placeholder=""><br><br>
+                    placeholder="Example : q1, q2 ..."><br><br>
                 <div>
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
