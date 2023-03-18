@@ -7,9 +7,6 @@ from src.helper import helper
 def root_page():
     return render_template('base.html')
 
-@app.route('/page1')
-def page_process():
-    return render_template('process_string.html')
 
 @app.route('/page2')
 def page2():
@@ -38,6 +35,9 @@ def page7():
 @app.route('/page8')
 def page8():
     return render_template('/page8.html')
+@app.route('/page9')
+def page9():
+    return render_template('/page9.html')
 
 
 
