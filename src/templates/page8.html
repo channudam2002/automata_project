@@ -14,49 +14,56 @@
             background-color: burlywood;
         }
 
-        h1 {
-            text-align: center;
-        }
-
-        form {
+        .form-group {
             width: 500px;
             margin: auto;
-            padding: 100px;
-            background: #663366;
+            padding: 75px;
+            background-color: lightgray;
             font-size: 20px;
             font-family: Verdana;
             color: white;
             margin-bottom: 50px;
-            margin-top: 200px;
+            margin-top: 100px;
         }
 
         input[type=text] {
             width: 80%;
-            padding: 5px;
+            padding: 10px;
             font-size: 18px;
         }
 
         .btn {
             padding: 10px 40px;
-            background-color: #236B8E;
+            background-color: green;
             color: #FFFFFF;
             font-style: oblique;
             font-weight: bold;
             border-radius: 10px;
+            margin-left: 220px;
+            margin-top: 10px;
         }
     </style>
 </head>
 
 <body>
-    <form>
-
-        <div class="form-group">
-            <label for="exampleInputEmail1 ">Input Final states!  </label>
-            <input type="string input" class="form-control" id="" aria-describedby="" placeholder=""><br><br>
-
+    <div class="relative">
+        <div class="w-screen h-screen overflow-clip absolute  top-0 left-0 z-10">
+            <img src="{{url_for('static', filename='storage/Math2.jpg')}}" alt="math" class="w-full">
         </div>
-        <a href="{{url_for('page8')}}" class="btn">Next</a>
-    </form>
+        <div
+            class="w-screen h-screen flex flex-col space-y-5 items-center justify-center absolute top-0 left-0 z-30 text-black">
+            <div class="form-group">
+                <label for="exampleInputEmail1 " class="text-dark mb-3 text-center px-5">Input final states : </label>
+                <input type="string input" class="form-control border-success" id="" aria-describedby=""
+                    placeholder=""><br><br>
+                <div>
+                    <a href="{{url_for('page4')}} " class="btn">Next</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
 </body>
 
 </html>
