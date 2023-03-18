@@ -7,9 +7,47 @@ class FiniteAutomata:
         self.startStateArr = startStateArr
         self.tranFuncObj = tranFuncObj
         self.alphaArr = alphaArr
-    # okayyy
-    def processString(self, string):
-        return string
+
+    def processString(self, stateArr, stringArr, firstState, finalStateArr):
+        # Make first state become the first element in list states
+        stateArr.remove(firstState)
+        stateArr.insert(0, firstState)
+        stringggg = ''
+        count = 0
+        K = [0 for i in range(len(stateArr))]  # k = [0, 0, 0]
+        # input transition
+        for i in range(len(stateArr)):
+            K[i] = [0 for j in range(len(stringArr))]  # k[i] = [0, 0]
+            for j in range(len(stringArr)):
+                K[i][j] = input('From ' + stateArr[i] + ' by ' + stringArr[j] + ' go: ')
+
+        def spot(q, w):
+            lis.append(K[stateArr.index(q)][stringArr.index(w)])
+            return K[stateArr.index(q)][stringArr.index(w)]
+        while True:
+            lis = []
+            str = stateArr[0]
+            w = input('Input string to check: ')
+            for i in w:
+                str = spot(str, i)
+            if len(finalStateArr) == 1:
+                for i in finalStateArr:
+                    stringOfFinalState = i
+                if lis[-1] == stringOfFinalState:
+                    stringggg = 'STRING ACCEPT BY DFA (' + stateArr[0] + '-->' + '-->'.join(lis) +')'
+                else:
+                    stringggg = 'STRING NOT ACCEPT BY DFA'
+            else:
+                for i in finalStateArr:
+                    if (lis[-1] == i):
+                        count = count + 1
+                if (count == 0):
+                    stringggg = 'STRING NOT ACCEPT BY DFA'
+                    count = 0
+                else:
+                    stringggg = 'STRING ACCEPT BY DFA (' + stateArr[0] + '-->' + '-->'.join(lis) +')'
+                    count = 0
+        return stringggg
 
     def minFa(self):
         accessableStateCollection = self.accessableStateFilter()
