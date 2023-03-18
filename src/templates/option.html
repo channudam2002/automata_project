@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Options</title>
+</head>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+    }
+</style>
+
+<body class="min-w-screen min-h-screen">
+    <div class="absolute bottom-0 right-0 w-screen flex flex-row space-x-5 items-center justify-between p-20 ">
+        <div>
+            <button>
+                <div class="flex flex-row space-x-3 items-center border-4 border-orange-300 shadow-md rounded-3xl p-5 px-12 bg-white text-orange-600">
+                    <span class="material-symbols-outlined">
+                        arrow_back_ios
+                    </span>
+                    <div class="text-xl">
+                        <p>Back</p>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="w-screen h-screen bg-green-500">
+        <div class="w-full h-full flex flex-col space-y-10 items-center justify-center">
+            <div>
+                <button>
+                    <div class="flex flex-row space-x-5 items-center justify-between p-5 px-12 rounded-xl bg-purple-200 border-4 border-purple-600">
+                        <div class="w-28">
+                            <img src="{{url_for('static', filename='storage/airplan.png')}}" class="w-full">
+                        </div>
+                        <div class="text-purple-600 font-bold text-2xl">
+                            <p>Process String</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <div class="flex flex-row space-x-5 items-center justify-between p-5 px-12 rounded-xl bg-red-200 border-4 border-red-600">
+                        <div class="w-10">
+                            <img src="{{url_for('static', filename='storage/compress.png')}}" class="w-full">
+                        </div>
+                        <div class="text-red-600 font-bold text-2xl">
+                            <p>Minimization</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
