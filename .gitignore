@@ -4,4 +4,4 @@
 pacakge-lock.json
 /instance
 /automata_venv
-/src/static/dist
+/src/static/dist/css/output.css

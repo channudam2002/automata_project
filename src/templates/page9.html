@@ -105,9 +105,9 @@
         </div>
         <div
             class="w-screen h-screen flex flex-col space-y-5 items-center justify-center absolute top-0 left-0 z-30 text-black">
-            <div class="form-group">
+            <form method="POST" action="/page9" class="form-group">
                 <label for="exampleInputEmail1 " class="text-dark mb-4 text-center px-2 font-bold">Input string to test your FA : </label>
-                <input type="string input" class="form-control border-success" id="" aria-describedby=""
+                <input type="text" name="string" class="form-control border-success" id="" aria-describedby=""
                     placeholder="Depend on your alphabets, Ex :(aaba)"><br><br>
                 <div>
                 <nav aria-label="Page navigation">
@@ -122,15 +122,19 @@
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
                         <li>
-                            <a href="{{url_for('page9')}}" aria-label="Next" class="btn">
+                            <button type="submit" aria-label="Next" class="btn">
                                 <span aria-hidden="true">Finish</span>
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
+    <div>
+        {% if message %}
+            {{message}}
+        {% endif %}
     </div>
 </body>
 

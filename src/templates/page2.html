@@ -122,17 +122,17 @@
         </div>
         <div
             class=" border-solid w-screen h-screen flex flex-col space-y-5 items-center justify-center absolute top-0 left-0 z-30 text-black">
-            <div class="form-group border-solid border-l-8">
+            <form method="POST" action="/page2" class="form-group border-solid border-l-8">
                 <label for="exampleInputEmail1 " class="text-dark mb-4 text-center px-2 font-bold">How many States in your 
                     FA?
                 </label>
-                <input type="string input" class="form-control border-success" id="" aria-describedby=""
+                <input required type="text" name="state_num" class="form-control border-success" id="" aria-describedby=""
                     placeholder="Example  : 1, 2 or 3..."><br><br>
                 <div>
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
                             <li>
-                                <a href="{{url_for('option_page')}} " class="btn">
+                                <a href="{{url_for('root_page')}} " class="btn">
                                     <span aria-hidden="true">Previous</span>
                                 </a>
                             </li>
@@ -141,13 +141,13 @@
                             <li><a href="#"></a></li>
                             <li><a href="#"></a></li>
                             <li>
-                                <a href="{{url_for('page3')}} " aria-label="Next" class="btn">
+                                <button type="submit" aria-label="Next" class="btn">
                                     <span aria-hidden="true">Next</span>
                                 </a>
                             </li>
                         </ul>
                 </div>
-            </div>
+            </form>
         </div>
 
     </div>

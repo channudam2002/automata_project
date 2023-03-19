@@ -1,6 +1,9 @@
 class FiniteAutomata:
 
-    def __init__(self, alphaArr, stateNum, stateArr, finalStateArr, startStateArr, tranFuncObj) -> None:
+    def __init__(self) -> None:
+        pass
+
+    def __init__(self, alphaArr=[], stateNum=0, stateArr=[], finalStateArr=[], startStateArr=[], tranFuncObj={}) -> None:
         self.stateNum = stateNum
         self.stateArr = stateArr
         self.finalStateArr = finalStateArr
@@ -10,8 +13,8 @@ class FiniteAutomata:
 
     def processString(self, string):
         # Make first state become the first element in list states
-        self.stateArr.remove(self.startStateArr)
-        self.stateArr.insert(0, self.startStateArr)
+        self.stateArr.remove(self.startStateArr[0])
+        self.stateArr.insert(0, self.startStateArr[0])
         processedString = ''
         count = 0
         K = [0 for i in range(len(self.stateArr))]  # k = [0, 0, 0]

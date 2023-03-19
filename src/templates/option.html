@@ -43,24 +43,27 @@
                         <div class="w-28">
                             <img src="{{url_for('static', filename='storage/airplan.png')}}" class="w-full">
                         </div>
-                        <a href="{{url_for('page2')}}" class="btn  text-purple-600 font-bold text-2xl">Process string</a>
+                        <a href="{{url_for('page9')}}" class="btn  text-purple-600 font-bold text-2xl">Process string</a>
                     
                     </div>
                 </button>
             </div>
             <div>
                 <button>
-                    <div class="flex flex-row space-x-5 items-center justify-between p-5 px-12 rounded-xl bg-red-200 border-4 border-red-600">
+                    <a href="{{url_for('option_minimize_page')}}" class="flex flex-row space-x-5 items-center justify-between p-5 px-12 rounded-xl bg-red-200 border-4 border-red-600">
                         <div class="w-10">
                             <img src="{{url_for('static', filename='storage/compress.png')}}" class="w-full">
                         </div>
-                        <div class="text-red-600 font-bold text-2xl">
-                            <p>Minimization</p>
-                        </div>
-                    </div>
+                        <p>Minimization</p>
+                    </a>
                 </button>
             </div>
         </div>
+    </div>
+    <div class="absolute bg-white">
+        {% if message %}
+            {{message}}
+        {% endif %}
     </div>
 </body>
 

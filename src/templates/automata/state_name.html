@@ -1,0 +1,53 @@
+{% extends 'automata/layout.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <form method="POST" action="/automata/state_name" class="flex flex-col w-full space-y-10 items-center justify-center">
+        <div class="flex flex-row items-center border-2 border-blue-500 rounded-lg">
+            <div class="p-3 bg-blue-100 text-blue-500 rounded-tl-lg rounded-bl-lg">
+                <p>Number of State</p>
+            </div>
+            <div>
+                <input value="1" id="state_num" name="state_num" type="text" class="w-full p-3 bg-transparent outline-none text-white" placeholder="number of state for your DFA">
+            </div>
+        </div>
+        <div class="flex flex-col items-center justify-center space-y-5 w-full h-full">
+            <div>
+                <p>State Name</p>
+            </div>
+            <div>
+                <hr class="w-72">
+            </div>
+            <div id="state_name" class="grid grid-cols-3 gap-4">
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="flex flex-row space-x-3 p-3 px-10 bg-green-100 text-green-500 border-2 border-green-500 rounded-xl">
+                <p>
+                    Next
+                </p>
+                <span class="material-symbols-outlined">
+                    navigate_next
+                </span>
+            </button>
+        </div>
+    </form>
+    <script>
+        let state_num_input = document.getElementById("state_num")
+        let state_num = Number(document.getElementById("state_num").value)
+            let state_name = document.getElementById("state_name");
+            let content = ''
+            for (let x=0; x<state_num; x++){
+                content += '<div><input type="text" name="stateName" placeholder="state name" class="p-3 w-32 text-center outline-none bg-blue-100 border-blue-500 text-blue-500 border-2 rounded-xl"></div>'
+            }
+            state_name.innerHTML = content
+        state_num_input.addEventListener('input', ()=>{
+            let state_num = Number(document.getElementById("state_num").value)
+            let state_name = document.getElementById("state_name");
+            let content = ''
+            for (let x=0; x<state_num; x++){
+                content += `<div><input type='text' name=stateName-${x} placeholder='state name' class='p-3 w-32 text-center outline-none bg-blue-100 border-blue-500 text-blue-500 border-2 rounded-xl'></div>`
+            }
+            state_name.innerHTML = content
+        })
+    </script>
+{% endblock %}

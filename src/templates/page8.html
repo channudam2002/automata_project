@@ -114,18 +114,22 @@
         </div>
         <div
             class="w-screen h-screen flex flex-col space-y-5 items-center justify-center absolute top-0 left-0 z-30 text-black">
-            <div class="form-group">
+            <form method="POST" action="/page8" class="form-group">
             
                 <label for="exampleInputEmail1 " class="text-dark mb-4 text-center px-6 font-bold">Input the Transaction :
                 </label>
-                <input type="string input" class="form-control border-success" id="" aria-describedby=""
-                    placeholder=""><br>
-                <input type="string input" class="form-control border-success" id="" aria-describedby=""
-                    placeholder=""><br>
-                <input type="string input" class="form-control border-success" id="" aria-describedby=""
-                    placeholder=""><br>
-                <input type="string input" class="form-control border-success" id="" aria-describedby=""
-                    placeholder=""><br><br>
+                    <div class="flex flex-col space-y-3 items-center justify-center">
+                        {% for state in state_arr %}
+                            <div class="flex flex-row space-x-3 items-center justify-center">
+                                {% for alpha in alpha_arr %}
+                                    <div class="flex flex-col space-y-3">
+                                        <p class="text-neutral-800">{{state}} with {{alpha}} </p>
+                                        <input type="text" name="{{state}}-{{alpha}}" class="outline-none border-2 border-blue-500 bg-blue-100 text-blue-500 rounded-xl">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
                 <div>
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
@@ -139,13 +143,13 @@
                             <li><a href="#"></a></li>
                             <li><a href="#"></a></li>
                             <li>
-                                <a href="{{url_for('page9')}}" aria-label="Next" class="btn">
+                                <button type="submit" aria-label="Next" class="btn">
                                     <span aria-hidden="true">Next</span>
-                                </a>
+                                </button>
                             </li>
                         </ul>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     </div>
