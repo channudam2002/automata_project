@@ -100,6 +100,28 @@
 
 <body>
     <div class="relative">
+        {% if message %}
+            <div id="model" class="text-green-500 text-2xl font-bold w-screen h-screen overflow-clip absolute  top-0 left-0 z-50 flex flex-col space-y-10 items-center justify-center bg-white">
+                <div>
+                    <img src="{{url_for('static', filename="storage/check.jpg")}}" class="w-20">
+                </div>
+                <div>
+                    {{message}}
+                </div>
+                <a href="{{url_for('page9')}}" class="absolute bottom-0 right-0 w-screen flex flex-row space-x-5 items-center justify-between p-20 ">
+                    <div>
+                        <button>
+                            <div class="flex flex-row space-x-3 items-center border-2 border-orange-300 shadow-md rounded-3xl p-3 bg-white text-orange-600">
+                                <div class="text-lg">
+                                    <p>Back</p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </a>
+            </div>
+        {% endif %}
+        
         <div class="w-screen h-screen overflow-clip absolute  top-0 left-0 z-10">
             <img src="{{url_for('static', filename='storage/math3.jpg')}}" alt="math" class="w-full">
         </div>
@@ -130,11 +152,6 @@
                 </div>
             </form>
         </div>
-    </div>
-    <div>
-        {% if message %}
-            {{message}}
-        {% endif %}
     </div>
 </body>
 

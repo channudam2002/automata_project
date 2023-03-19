@@ -80,10 +80,9 @@ def page9():
         finiteAutomata.startStateArr = session['startStateArr']
         finiteAutomata.finalStateArr = session['finalStateArr']
         finiteAutomata.tranFuncObj = session['tranFunc_obj']
-        print(session["stateArr"], session['alphaArr'], session['stateNum'], session['startStateArr'], session['finalStateArr'], session['tranFunc_obj'])
+        # print(session["stateArr"], session['alphaArr'], session['stateNum'], session['startStateArr'], session['finalStateArr'], session['tranFunc_obj'])
         message = finiteAutomata.processString(string)
-        print (message)
-        # return render_template('page9.html', message=message)
+        return render_template('page9.html', message=message)
     return render_template('page9.html')
 @app.route('/options')
 def option_page():
@@ -99,7 +98,7 @@ def option_minimize_page():
     finiteAutomata.finalStateArr = session['finalStateArr']
     finiteAutomata.tranFuncObj = session['tranFunc_obj']
     message = finiteAutomata.minFa()
-    render_template('option.html', message=message)
+    return render_template('option.html', message=message)
 
 
 
